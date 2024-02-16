@@ -7,11 +7,16 @@ csvpath =  os.path.join('c:/Users/danie/Documents/Module3 Python/Module-3-Python
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     csv_header = next(csvreader)
-    print(csv_header)
 
     row_count = 0
+    candidates=[]
 
     for row in csvreader:
         row_count = row_count + 1
-    
-    print(row_count)
+        candidates.append(row[2])
+
+    for i in range(len(candidates)):
+        if candidates[i] != candidates[i+1]:
+            print(candidates[i])
+
+    print(f'Total Votes: {row_count}')
