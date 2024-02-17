@@ -27,8 +27,24 @@ with open(csvpath) as csvfile:
     print(f'Total Votes: {total_votes}')
     print("-------------------------------------------------")
 
+    max_votes = []
+    max_vote = 0
+
     for candidate in candidates:
+
         candidate_votes = votes[candidates.index(candidate)]
         pc_votes = round(candidate_votes / total_votes *100,3)
+
         print(f'{candidate}: {pc_votes}% ({candidate_votes})')
+
+        max_votes.append(candidate_votes)
+        if candidate_votes > max_vote:
+            max_vote = candidate_votes
+
+    print("-------------------------------------------------")
+    
+    max_votes_index = int(max_votes.index(max_vote))
+    
+    print(f'Winner: {candidates[max_votes_index]}')
+
     print("-------------------------------------------------")
