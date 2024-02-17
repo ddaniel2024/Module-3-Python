@@ -25,7 +25,6 @@ max_inc = 0
 max_inc_month = 0
 max_dec = 0  
 max_dec_month = 0
-
 changes=[]
 
 for i in range(1,len(prices)):
@@ -56,3 +55,16 @@ print(f'Average Change: ${average_change}')
 print(f'Greatest Increase in in Profits: {max_inc_month} (${max_inc})')
 print(f'Greatest Decrease in Profits: {max_dec_month} (${max_dec})')
 print("-------------------------------------------------")
+
+file = 'C:/Users/danie/Documents/Module3 Python/Module-3-Python/PyBank/output.txt'
+
+with open("analysis.txt", "w") as file:
+    
+    file.write("Financial Analysis")
+    file.write("-------------------------------------------------")
+    file.write(f'Total Months: {row_no}')
+    file.write(f'Total: ${total}')  
+    file.write(f'Average Change: ${average_change}')
+    file.write(f'Greatest Increase in in Profits: {max_inc_month} (${max_inc})')
+    file.write(f'Greatest Decrease in Profits: {max_dec_month} (${max_dec})')
+    file.write("-------------------------------------------------")
