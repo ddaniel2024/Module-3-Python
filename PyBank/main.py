@@ -60,11 +60,11 @@ file = 'C:/Users/danie/Documents/Module3 Python/Module-3-Python/PyBank/output.tx
 
 with open("analysis.txt", "w") as file:
     
-    file.write("Financial Analysis")
-    file.write("-------------------------------------------------")
-    file.write(f'Total Months: {row_no}')
-    file.write(f'Total: ${total}')  
-    file.write(f'Average Change: ${average_change}')
-    file.write(f'Greatest Increase in in Profits: {max_inc_month} (${max_inc})')
-    file.write(f'Greatest Decrease in Profits: {max_dec_month} (${max_dec})')
-    file.write("-------------------------------------------------")
+    file.write("Financial Analysis\n")
+    file.write("-------------------------------------------------\n")
+    file.write(f'Total Months: {row_no}\n')
+    file.write(f'Total: ${total}\n')  
+    file.write(f'Average Change: ${average_change}\n')
+    file.write(f'Greatest Increase in in Profits: {max_inc_month} (${max_inc})\n')
+    file.write(f'Greatest Decrease in Profits: {max_dec_month} (${max_dec})\n')
+    file.write("-------------------------------------------------\n")
