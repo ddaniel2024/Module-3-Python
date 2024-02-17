@@ -10,6 +10,7 @@ with open(csvpath) as csvfile:
 
     row_count = 0
     candidates=[]
+    votes=[0,0,0]
 
     for row in csvreader:
         row_count = row_count + 1
@@ -17,13 +18,12 @@ with open(csvpath) as csvfile:
         if row[2] not in candidates:
             candidates.append(row[2])
         
+
+        candidate_index = candidates.index(str(row[2]))
+        votes[int(candidate_index)] +=1
+
     print(f'Total Votes: {row_count}')
 
     print(candidates)
-
-    for candidate in candidates:
-        votes = 0
-        for row in csvreader:
-            if row[2] == candidate:
-                votes = votes + 1
-        print(votes)
+       
+    print(votes)
