@@ -13,10 +13,9 @@ with open(csvpath) as csvfile:
 
     for row in csvreader:
         row_count = row_count + 1
-        candidates.append(row[2])
-
-    for i in range(len(candidates)):
-        if candidates[i] != candidates[i+1]:
-            print(candidates[i])
-
+        
+        if row[2] not in candidates:
+            candidates.append(row[2])
+        
     print(f'Total Votes: {row_count}')
+    print(candidates)
