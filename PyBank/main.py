@@ -56,9 +56,9 @@ print(f'Greatest Increase in in Profits: {max_inc_month} (${max_inc})')
 print(f'Greatest Decrease in Profits: {max_dec_month} (${max_dec})')
 print("-------------------------------------------------")
 
-file = 'C:/Users/danie/Documents/Module3 Python/Module-3-Python/PyBank/output.txt'
+text_filepath = os.path.join('C:/Users/danie/Documents/Module3 Python/Module-3-Python/PyBank/analysis/analysis.txt')
 
-with open("analysis.txt", "w") as file:
+with open(text_filepath, "w") as file:
     
     file.write("Financial Analysis\n")
     file.write("-------------------------------------------------\n")
