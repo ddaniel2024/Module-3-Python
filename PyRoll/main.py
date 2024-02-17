@@ -22,9 +22,13 @@ with open(csvpath) as csvfile:
         candidate_index = int(candidates.index(row[2]))
         votes[candidate_index] +=1
 
+    print("Election Results")
+    print("-------------------------------------------------")
     print(f'Total Votes: {total_votes}')
+    print("-------------------------------------------------")
 
     for candidate in candidates:
         candidate_votes = votes[candidates.index(candidate)]
-        pc_votes = candidate_votes / total_votes
-        print(f'{candidate} {pc_votes} {candidate_votes}')
+        pc_votes = round(candidate_votes / total_votes *100,3)
+        print(f'{candidate}: {pc_votes}% ({candidate_votes})')
+    print("-------------------------------------------------")
