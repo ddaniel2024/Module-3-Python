@@ -2,6 +2,7 @@
 
 * PyBank analysis
 * PyRoll analysis
+
   _* As current working directory is not in the Module 3 folder, absolute referencing is used to obtain csv filepath_
 
 * Code sources:
