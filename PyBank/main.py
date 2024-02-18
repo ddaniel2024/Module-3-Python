@@ -2,7 +2,7 @@
 import os
 import csv
 
-#define csv path; relative location was not working so absolute location had to be used
+#define csv path; absolute location was used instead of relative
 csvpath = os.path.join('C:/Users/danie/Documents/Module3 Python/Module-3-Python/PyBank/Resources/budget_data.csv')
 
 #open csv file, state csv header
@@ -24,12 +24,11 @@ with open(csvpath) as csvfile:
         total = total + int(row[1])
         row_no = row_no +1
 
-        #while iterating, add prices to the "prices" list, and add months to the "months" list 
+        #while iterating, append prices to the "prices" list, and append months to the "months" list 
         prices.append(row[1])
         months.append(row[0])
 
 ##calculate greatest increase and decrease
-        
 #set max and min increases to 0, set max and min months to 0, establish blank "changes" list (to use later to calculate average change)
 max_inc = 0
 max_inc_month = 0
@@ -56,7 +55,6 @@ for i in range(1,len(prices)):
         max_dec_month = months[int(price_index)]
 
 ##calculate average change
-        
 #set sum of changes to 0
 sum_of_changes = 0
 
@@ -78,9 +76,8 @@ print(f'Greatest Decrease in Profits: {max_dec_month} (${max_dec})')
 print("-------------------------------------------------")
 
 ##export results to textfile in "analysis" folder
-
 #define location for text file
-text_filepath = os.path.join('C:/Users/danie/Documents/Module3 Python/Module-3-Python/PyBank/analysis/analysis.txt')
+text_filepath = os.path.join('C:/Users/danie/Documents/Module3 Python/Module-3-Python/PyBank/analysis/pybank_analysis.txt')
 
 #if there is no text file at the location, one is created. If there is already a text file, it is re-written
 with open(text_filepath, "w") as file:
