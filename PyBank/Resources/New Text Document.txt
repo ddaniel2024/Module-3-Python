@@ -1,2 +1,0 @@
-https://builtin.com/software-engineering-perspectives/what-is-with-statement-python
-https://stackoverflow.com/questions/8024248/telling-python-to-save-a-txt-file-to-a-certain-directory-on-windows-and-mac
