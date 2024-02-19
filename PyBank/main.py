@@ -3,7 +3,7 @@ import os
 import csv
 
 #define csv path; absolute location was used instead of relative
-csvpath = os.path.join('C:/Users/danie/Documents/Module3 Python/Module-3-Python/PyBank/Resources/budget_data.csv')
+csvpath = os.path.join('C:/Users/danie/Documents/Module-3-Python/Module-3-Python/PyBank/Resources/budget_data.csv')
 
 #open csv file, state csv header
 with open(csvpath) as csvfile:
@@ -77,7 +77,7 @@ print("-------------------------------------------------")
 
 ##export results to textfile in "analysis" folder
 #define location for text file
-text_filepath = os.path.join('C:/Users/danie/Documents/Module3 Python/Module-3-Python/PyBank/analysis/pybank_analysis.txt')
+text_filepath = os.path.join('C:/Users/danie/Documents/Module-3-Python/Module-3-Python/PyBank/analysis/pybank_analysis.txt')
 
 #if there is no text file at the location, one is created. If there is already a text file, it is re-written
 with open(text_filepath, "w") as file:
@@ -87,6 +87,6 @@ with open(text_filepath, "w") as file:
     file.write(f'Total Months: {row_no}\n')
     file.write(f'Total: ${total}\n')  
     file.write(f'Average Change: ${average_change}\n')
-    file.write(f'Greatest Increase in in Profits: {max_inc_month} (${max_inc})\n')
+    file.write(f'Greatest Increase in Profits: {max_inc_month} (${max_inc})\n')
     file.write(f'Greatest Decrease in Profits: {max_dec_month} (${max_dec})\n')
     file.write("-------------------------------------------------\n")

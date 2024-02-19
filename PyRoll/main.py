@@ -3,7 +3,7 @@ import os
 import csv
 
 #define csv path; absolute location was used
-csvpath = os.path.join('c:/Users/danie/Documents/Module3 Python/Module-3-Python/PyRoll/Resources/election_data.csv')
+csvpath = os.path.join('c:/Users/danie/Documents/Module-3-Python/Module-3-Python/PyRoll/Resources/election_data.csv')
 
 #open csv file, state csv header
 with open(csvpath) as csvfile:
@@ -70,7 +70,7 @@ print("-------------------------------------------------")
 
 ##export results to textfile in "analysis" folder
 #define location for text file
-text_filepath = os.path.join('C:/Users/danie/Documents/Module3 Python/Module-3-Python/PyRoll/analysis/pyroll_analysis.txt')
+text_filepath = os.path.join('C:/Users/danie/Documents/Module-3-Python/Module-3-Python/PyRoll/analysis/pyroll_analysis.txt')
 
 #if there is no text file at the location, one is created. If there is already a text file, it is re-written
 with open(text_filepath, "w") as file:
