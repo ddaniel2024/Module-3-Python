@@ -60,7 +60,6 @@ for i in range(len(dict)):
     print(f'{dict["Name"][i]}: {dict["pc_vote"][i]}% ({dict["Votes"][i]})')
 print("-------------------------------------------------")
 print(f'Winner: {winner}')
-print("-------------------------------------------------")
 
 ##export results to textfile in "analysis" folder
 #define location for text file
@@ -77,4 +76,3 @@ with open(text_filepath, "w") as file:
         file.write(f'{dict["Name"][i]}: {dict["pc_vote"][i]}% ({dict["Votes"][i]})\n')
     file.write("-------------------------------------------------\n")
     file.write(f'Winner: {winner}\n')
-    file.write("-------------------------------------------------\n")
